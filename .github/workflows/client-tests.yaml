@@ -1,0 +1,15 @@
+nane: first ci
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test-client:
+    run on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+      - name: Goto client and run tests
+        run: cd frontend && npm i && npm test
