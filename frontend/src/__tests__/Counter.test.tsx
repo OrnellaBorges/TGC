@@ -20,7 +20,7 @@ describe("counter", () => {
     ).toBeInTheDocument();
   });
 
-  it.only("decremente au clic", async () => {
+  it("decremente au clic", async () => {
     render(<Counter />);
 
     const h2 = screen.getByRole("heading", { level: 2, name: "Count: 0" });
